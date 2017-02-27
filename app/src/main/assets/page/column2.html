@@ -1,0 +1,46 @@
+﻿<div style="line-height: 45px; color: white; background-color: #527EE8; width: 100%; line-height: 50px; height: 50px;">
+    <div class="col-xs-2" ng-click="columnShow(1)">
+        <img class="img-responsive inline-table" style="padding: 0 0 0 0; width: 20px; margin-right: 5px;" src="static/img/返回_icon.png" /></div>
+    <div class="col-xs-8 center">
+        <button data-toggle="dropdown" class="dropdown-toggle" style="line-height: 20px; background-color: #527ee8; border: none"><span>{{culumns2Title}}</span><span class="caret"></span></button>
+        <ul class="dropdown-menu" style="color: white; left: 15px; background-color: #000; filter: alpha(opacity=50); -moz-opacity: 0.5; -khtml-opacity: 0.5; opacity: 0.5;">
+            <li ng-repeat="(key,value) in coulumn2Navigation" class="">
+                <a href="#" style="color: white;" ng-click="changeColumnsContent(key,value)" ng-init="$index == 0 ? changeColumnsContent(key,value) : ''">{{value}}</a>
+            </li>
+        </ul>
+
+    </div>
+    <div class="col-xs-2">
+        <!--<span class="pull-right">
+            <img class="img-responsive inline-table" style="padding: 0 0 0 0; width: 20px; margin-right: 5px;" src="static/img/搜索_icon.png"/></span>-->
+    </div>
+</div>
+<div class="">
+    <div class=" clearfix">
+        <div class="column">
+            <div class="tabbable swiper-container" id="coulumn2NextChannals" style="border-bottom: 1px solid #ddd;">
+                <ul class="nav nav-tabs swiper-wrapper">
+                    <li ng-repeat="(key,value) in coulumn2NextChannals" class="swiper-slide swiper-title-slide {{$index == 0 ? 'active' : ''}}" repeat-finish>
+                        <a href="#{{key}}" data-toggle="tab" style="border: none; color: #000" ng-click="getColumn2SecondChannelList(key)" ng-init="$index == 0 ? getColumn2SecondChannelList(key) : ''">{{value}}</a>
+                    </li>
+                </ul>
+                </div>
+
+                <div class="" style="margin-top: 10px">
+                    <div class="" id="{{key}}" ng-repeat="(key,value) in coulumn2NextChannalsContent">
+                        <div ng-click="showColumnData(1,value.id)">
+                            <div style="padding-left: 15px">
+                                <p style="font-size: 17px;">
+                                    {{value.docTitle}}
+                                </p>
+                                <p style="color: #ABB0C7">
+                                    {{value.docPubDate}}
+                                </p>
+                            </div>
+                            <div style="background-color: #d9dde1; height: 1px; width: 100%; margin-bottom: 10px;"></div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>

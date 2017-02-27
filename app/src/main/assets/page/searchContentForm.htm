@@ -1,0 +1,85 @@
+﻿<div style="color: white; background-color: #527EE8; width: 100%; line-height: 60px; height: 60px;">
+    <div class="col-xs-1" style="padding-right: 0px;" ng-click="searchBackBtnClick()">
+        <img class="inline-table" style="padding: 0 0 0 0; width: 20px; margin-right: 5px;" src="static/img/返回_icon.png" />
+    </div>
+    <div class="col-xs-11 center" style="padding-right: 0px;">
+        <div style="line-height: 60px; width: 100%; height: 50px;">
+            <table style="width: 100%; line-height: 30px; margin-top: 15px">
+                <tr>
+                    <td style="width: 80%; padding-left: 5px; background-color: RGB(138,167,239); border-radius: 0px 1px 1px 0px;">
+                        <input type="text" value="{{searchKeyWords}}" style="line-height: 30px; background-color: RGB(138,167,239); width: 100%; border: none;border-radius:0;height:30px;" />
+
+                    </td>
+                    <td style="width: 20%; padding-left: 5px; padding-right: 5px;">
+                        <div style="line-height: 30px; background-color: #fff; width: 100%; padding-left: 10px; border-radius: 2px; color: #527ee8; padding-left: 2px" ng-click="searchBtnClick()">取消</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<div style="margin-top: 10px; color: black; line-height: 1.42857143;">
+    <div class="container">
+        <p style="text-align: center">本次搜索共有{{searchFormList.length}}条结果</p>
+    </div>
+    <div ng-repeat="(key,value) in searchFormList" ng-show="searchType.id !=4 && searchType.id != 5&& searchType.id != 3">
+        <div ng-click="showColumnData(-1,value.id)">
+            <div style="padding-left: 15px">
+                <p style="font-size: 17px;">
+                    {{value.docTitle}}
+                </p>
+                <p style="color: #ABB0C7">
+                    {{value.docPubDate}}
+                </p>
+            </div>
+            <div style="background-color: #d9dde1; height: 1px; width: 100%; margin-bottom: 10px;"></div>
+        </div>
+    </div>
+    <div ng-repeat="(key,value) in searchFormList" ng-click="showColumnData(2,value.id)" ng-show="searchType.id == 3">
+        <div style="padding-left: 15px">
+            <p style="font-size: 17px;">
+                {{value.docTitle}}
+            </p>
+            <p style="color: #ABB0C7">
+                {{value.docCreateDate}}
+            </p>
+        </div>
+        <div style="background-color: #d9dde1; height: 1px; width: 100%; margin-bottom: 10px;"></div>
+    </div>
+    <div class="container">
+        <div ng-repeat="x in searchFormList" ng-click="showColumnData(3,x.supporid)" ng-show="searchType.id == 4">
+            <div style="margin-top: 10px; color: #898989">
+                <h4 style="color: #3F3F3F; font-weight: 600;">{{x.entname}}</h4>
+                <div style="margin-top: 5px">
+                    <img src="static/img/注册号_icon.png" />&nbsp;&nbsp;&nbsp;{{x.regno}}
+                </div>
+                <div style="margin-top: 5px">
+                    <img src="static/img/部门_icon.png" />&nbsp;&nbsp;&nbsp;{{x.impspdepart}}
+                </div>
+                <div style="margin-top: 5px">
+                    <img src="static/img/日期_icon.png" />&nbsp;&nbsp;&nbsp;{{x.impspdate}}
+                </div>
+                <div style="margin-top: 5px">
+                    {{x.enjspcontent}}
+                </div>
+                <div style="height: 2px; background-color: #D9DDE1; margin-top: 5px;"></div>
+            </div>
+        </div>
+        <div ng-repeat="x in searchFormList" ng-click="showColumnData(4,x.entid)" ng-show="searchType.id ==5">
+            <div style="margin-top: 10px; color: #898989">
+                <h4 style="color: #3F3F3F; font-weight: 600;">{{x.entname}}</h4>
+                <div style="margin-top: 5px">
+                    <img src="static/img/注册号_icon.png" />&nbsp;&nbsp;&nbsp;{{x.regno}}
+                </div>
+                <div style="margin-top: 5px">
+                    <img src="static/img/注册资本_icon.png" />&nbsp;&nbsp;&nbsp;{{x.cptltotal}}
+                </div>
+                <div style="margin-top: 5px">
+                    <img src="static/img/企业类型_icon.png" />&nbsp;&nbsp;&nbsp;{{x.enttype}}
+                </div>
+                <!--<div style="margin-top:5px"><img src="static/img/登记机关_icon.png" />&nbsp;&nbsp;&nbsp;{{x.impspdate}}</div>-->
+                <div style="height: 2px; background-color: #D9DDE1; margin-top: 5px;"></div>
+            </div>
+        </div>
+    </div>
+</div>

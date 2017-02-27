@@ -1,0 +1,75 @@
+﻿<div style="color:white;background-color:#527EE8;width:100%;height:60px;padding-top:10px;">
+    <div class="col-xs-2" ng-click="backQuestion()"><img class="img-responsive inline-table" style="padding: 0 0 0 0; width: 20px;margin-right: 5px;" src="static/img/返回_icon.png" id="backQuestion"/></div>
+    <div class="col-xs-8 center"><span>小微企业名录使用<br />情况调查表</span></div>
+    <div class="col-xs-2">
+        <!--<span class="pull-right"><img class="img-responsive inline-table" style="padding: 0 0 0 0; width: 20px;margin-right: 5px;" src="static/img/搜索_icon.png" /></span>-->
+    </div>
+</div>
+<div class="" style="margin-top: 20px;padding-right:0px">
+        <div class="swiper-container" id="survey">
+        <div class="swiper-wrapper">
+    <div ng-repeat="(key,value) in serveralList" class="swiper-slide">
+        <div style="width:100%;text-align:left">
+            <p style="font-size: 20px; font-weight: 600;" ng-init="outerIndex = value.surveyInfo.serType">&nbsp{{$index+1}}.&nbsp&nbsp{{value.surveyInfo.surTitle}}</p>
+            <div style="background-color: #d9dde1; height: 1px"></div>
+            <table style="width: 100%;">
+                <tr ng-repeat="(key,value) in value.questList">
+                    <td>
+                    <table style="width: 100%;">
+                        <tr>
+                            <td style="width: 85%">
+                        <div style="padding-top: 15px;margin-left:15px;margin-right:10px;color:#3f3f3f">{{value.qdesc}}</div>
+                    </td>
+                    <td style="width: 15%">
+                        <input id="{{value.id}}" type="{{outerIndex == 1 ? 'radio' :'checkbox'}}" style="margin-top: 20px;margin-left:20px;margin-right:10px;"  name="{{value.surId}}" ng-click="changeAwserList(value.surId,value.id)"/></td>
+                        </tr>
+                        <tr>
+                            <td style="width:100%" colspan="2"><div style="background-color: #d9dde1; height: 1px; margin-top: 15px;margin-left:5px;margin-right:5px"></div></td>
+                        </tr>
+                    </table>
+                        </td>
+                </tr>
+                <tr>
+                    <td>
+                        
+                    </td>
+                </tr>
+            </table>
+            </div>
+    </div>
+                  </div>
+                                <div class="container">
+            <div class="col-xs-12">
+                <div class="center next" style="width:70px;background-color: #527EE8;color: white;margin-top: 30px;padding:5px 5px 5px 5px">
+                    下一题
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>

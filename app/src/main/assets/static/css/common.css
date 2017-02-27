@@ -1,0 +1,254 @@
+button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    line-height: 1;
+}
+
+/*div[ng-include="'page/column4.html'"] .caret,div[ng-include="'page/column5.html'"] .caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    margin-top: 65%;
+    vertical-align: middle;
+    border-top: 8px solid transparent;
+    border-right: 8px solid;
+    border-left: 4px solid transparent;
+}*/
+
+.center {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.search-background {
+    background-color: #fff;
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+}
+
+.swiper-title-slide {
+    font-size: 16px;
+    font-family: simhei;
+    text-align: center;
+    width: auto;
+}
+
+#searchInput ::-webkit-input-placeholder {
+    color: #fff;
+}
+
+#searchInput ::-moz-placeholder {
+    color: #fff;
+}
+
+#searchInput :-moz-placeholder {
+    color: #fff;
+}
+
+.showhotkey {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    background-color: #e7eaf1;
+    white-space: nowrap;
+}
+
+.css2 {
+    overflow: hidden; /*自动隐藏文字*/
+    text-overflow: ellipsis; /*文字隐藏后添加省略号*/
+    white-space: nowrap; /*强制不换行*/
+    width: 20em; /*不允许出现半汉字截断*/
+}
+
+.bg {
+    background-image: url(../../static/img/banner_img.png);
+    background-repeat: no-repeat;
+    /*background-position: center;*/
+    background-size: 100% 75%;
+}
+
+.application-bg {
+    background-image: url(../../static/img/申请扶持导航_icon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    background-color: #7CA2FF;
+}
+
+.contection-bg {
+    background-image: url(../../static/img/connect_circle.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 101% 100%;
+}
+
+.common-box {
+    /*margin-top: auto;
+    margin-bottom: auto;*/
+}
+
+.inline-table {
+    display: inline-table;
+}
+
+.region-button {
+    border: 1px solid #c0d0f8;
+    padding: 10px 0 10px 0;
+    border-radius: 5px;
+}
+
+.mine-form {
+    line-height: 45px;
+    width: 100%;
+    line-height: 50px;
+    height: 50px;
+    padding-left: 20px;
+    border-bottom: 1px solid #d9dde1;
+}
+
+#customization .nav > li > a {
+    position: relative;
+    display: block;
+    padding: 4px 10px;
+    border-radius: 0;
+    color: white;
+    border: none !important;
+}
+
+#customization .nav > li.active {
+    background-color: #fff;
+}
+
+#indexTabMainBar .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    color: #527ee8 !important;
+    cursor: default;
+    background-color: #fff;
+    border: none !important;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+    background-color: white;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    color: #527EE8 !important;
+    cursor: default;
+    background-color: #fff;
+    border-bottom: 2px solid #527EE8 !important;
+}
+
+.bg .search-div {
+    /* placeholder颜色  */
+    color: #517de7;
+    /* placeholder字体大小  */
+    font-size: 15px;
+    font-weight: bolder;
+    /* placeholder位置  */
+    text-align: center;
+}
+
+::-webkit-scrollbar {/*隐藏滚轮*/
+display: none;
+}
+
+html, body{ height:100%;overflow:hidden;overflow-y: scroll;}
+
+/*.swiper-container {
+    width: 100%;
+    height: 20px;
+    margin: 20px auto;
+}*/
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.tipsBackground {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99999999;
+}
+
+.tipsBody {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 80%;
+    color: #b3b3b3;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+
+.tipsTitle {
+    background: rgba(0, 0, 0, 0);
+    margin-left: auto;
+    height: 44px;
+    color: white;
+    text-align: center;
+    line-height: 44px;
+    margin-right: auto;
+}
+
+.tipsContent {
+    text-align: center;
+    margin: 2% 2% 2% 2%;
+    width: 96%;
+    /*min-height: 30px;*/
+    max-height: 400px;
+    overflow: auto;
+    padding-bottom: 44px;
+}
+
+.tipsBottom {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 44px;
+}
+
+.tipsButton {
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 44px;
+    width: 100%;
+    text-align: center;
+}
+
+.loadingImg {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}

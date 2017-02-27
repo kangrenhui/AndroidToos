@@ -1,0 +1,162 @@
+﻿<!--头部文件-->
+<div class="bg">
+    <div style="height: 185px">
+        <div class="pull-left" style="padding-top: 15px; padding-left: 5px;width:80px" ng-click="regionSelect()">
+            <img class="img-responsive inline-table" style="padding: 0 0 0 0; width: 25%; margin-right: 5px;" src="static/img/位置_icon.png" />
+            <span style="color: white">{{currentRegion.value}}</span>
+        </div>
+
+        <!--<img src="static/img/Banner.png" class="img-responsive" />-->
+        <div style="height: 70px;">
+           
+        </div>
+        <div class="container">
+                <div class="center">
+            <img class="img-responsive inline-table" style="padding: 0 0 0 0;width:240px" src="static/img/banner_text.png" />
+                    </div>
+                </div>
+        <div style="margin-top:20px">
+
+            <div class="container">
+                <div class="input-group col-xs-12" ng-click="showSearchForm()" style="border-radius:4px;border:none;height:30px;background-color:white">
+                    <div class="center search-div" style="margin-top: 4px;">
+                        <img class="img-responsive" style="padding: 0 0 0 0;display:inline;width:18px;margin-bottom: 3px;"  src="static/img/首页搜索_icon.png" />
+                        <span>搜索</span>
+                    </div>
+                </div>
+                <!--<input class="input-group col-xs-12" placeholder="搜索" type="text" ng-click="showSearchForm()" style="    border-radius: 4px;border: none;height: 30px;"/>-->
+            </div>
+        </div>
+    </div>
+    <!--分栏栏目-->
+    <div class="" style="background-color: white; margin-left: 10px; margin-right: 10px; padding: 5px 5px 5px 5px; border-radius: 4px 4px 0 0;margin-top: 20px;">
+        <!--<div class="row" style="margin-top: 8px;">
+                <div class="inline-table" style="background-color: #FD8469; margin-left: 20px; margin-right: 5px;width:45%;height:100px">
+                    <span class="common-box">要闻动态</span>
+                </div>
+                <div class="inline-table" style="background-color: #FFA300; width:45%;height:100px">
+                    <span class="common-box">扶持政策<br />
+                        集中公示</span>
+                </div>
+                <div class="" style="margin-top: 8px;">
+                    <div class="col-xs-12" style="background-color: #7CA2FF">
+                        <span class="common-box">申请扶持导航</span>
+                    </div>
+                </div>
+            </div>-->
+        <table style="width: 100%;">
+            <tr>
+                <td style="width: 49%; background-color: #FD8469; height: 100px" ng-click="columnShow(0)">
+                    <!--                <div class="col-xs-1" style="padding: 0 0 0 0"></div>
+                <img class="img-responsive inline-table col-xs-3" style="padding: 0 0 0 0" src="static/img/要闻动态_icon.png" />
+
+                <span class="col-xs-7" style="padding: 0 0 0 0; margin-top: 5%;">要闻动态</span>-->
+                    <table style="width: 100%;">
+                        <tr>
+                            <td style="width: 10%">&nbsp;</td>
+                            <td style="width: 30%">
+                                <img class="img-responsive" src="static/img/要闻动态_icon.png" /></td>
+                            <td style="width: 60%; text-align: left">
+                                <p style="margin-top: 5%; padding-left: 10%;padding-right:10%;">要闻动态</p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td style="width: 2%;">&nbsp</td>
+                <td style="width: 49%; background-color: #FFA300" ng-click="columnShow(1)">
+                    <table style="width: 100%;">
+                        <tr>
+                            <td style="width: 10%">&nbsp;</td>
+                            <td style="width: 30%">
+                                <img class="img-responsive" style="width: 50px" src="static/img/信息定制_icon.png" /></td>
+                            <td style="width: 60%; text-align: left">
+                                <p style="margin-top: 5%; padding-left: 10%;padding-right:10%;">扶持政策集中公示</p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr style="height: 2px"></tr>
+            <tr>
+                <td colspan="3" class="application-bg" style="height: 70px;" ng-click="columnShow(2)">
+                    <div>
+                        申请扶持导航
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="" style="margin-left: 10px; margin-right: 10px;">
+    <table style="width: 100%; height: 40px;" class="contection-bg">
+        <tr>
+            <td style="width: 100%">&nbsp;</td>
+        </tr>
+    </table>
+</div>
+<div class="" style="background-color: white; margin-left: 10px; margin-right: 10px; padding: 5px 5px 5px 5px; border-radius: 0 0 4px 4px">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 49%; background-color: #57c776; height: 100px" ng-click="columnShow(3)">
+                <table style="width: 100%;">
+                    <tr>
+                        <td style="width: 10%">&nbsp;</td>
+                        <td style="width: 30%">
+                            <img class="img-responsive" src="static/img/企业扶持信息公示_icon.png" style="height: 50px"/></td>
+                        <td style="width: 60%; text-align: left">
+                            <p style="margin-top: 5%; padding-left: 10%;padding-right:10%;">企业享受扶持信息公示</p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 2%;">&nbsp</td>
+            <td style="width: 49%; background-color: #7ca2ff" ng-click="columnShow(4)">
+                <table style="width: 100%;">
+                    <tr>
+                        <td style="width: 10%">&nbsp;</td>
+                        <td style="width: 30%">
+                            <img class="img-responsive" src="static/img/小微企业库_icon.png" /></td>
+                        <td style="width: 60%; text-align: left">
+                            <p style="margin-top: 5%; padding-left: 10%;padding-right:10%;">小微企业库</p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr style="height: 2px"></tr>
+        <tr>
+            <td style="width: 49%; background-color: #FFA300; height: 80px" ng-click="columnShow(5)">
+                <table style="width: 100%;">
+                    <tr>
+                        <td style="width: 10%">&nbsp;</td>
+                        <td style="width: 30%">
+                            <img class="img-responsive" style="height: 50px" src="static/img/小微企业划型标准_icon.png" /></td>
+                        <td style="width: 60%; text-align: left">
+                            <p style="margin-top: 5%; padding-left: 10%;padding-right:10%;">小微企业划型标准</p>
+                        </td>
+                    </tr>
+                </table>
+                <!--                <div class="col-xs-1" style="padding: 0 0 0 0"></div>
+                <div class="col-xs-3" style="padding: 0 0 0 0">
+                <img class="img-responsive" src="static/img/小微企业划型标准_icon.png" />
+                    </div>
+                <div class="col-xs-7" style="padding: 0 0 0 0">
+                <span style="margin-top: 5%;padding-left: 10%;">小微企业划型标准</span>
+                    </div>-->
+            </td>
+            <td style="width: 2%;">&nbsp</td>
+            <td style="width: 49%; background-color: #FD8469" ng-click="columnShow(6)">
+                <table style="width: 100%;">
+                    <tr>
+                        <td style="width: 10%">&nbsp;</td>
+                        <td style="width: 30%">
+                            <img class="img-responsive" src="static/img/问卷调查_icon.png" style="height: 50px"/></td>
+                        <td style="width: 60%; text-align: left">
+                            <p style="margin-top: 5%; padding-left: 10%;padding-right:10%;">问卷调查</p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>

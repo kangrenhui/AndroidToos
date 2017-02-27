@@ -1,0 +1,40 @@
+﻿<div style="line-height: 45px; color: white; background-color: #527EE8; width: 100%; line-height: 50px; height: 50px;">
+    <div class="col-xs-3" ng-click="columnShow(2)">
+        <img class="img-responsive inline-table" style="padding: 0 0 0 0; width: 20px; margin-right: 5px;" src="static/img/返回_icon.png" />
+    </div>
+    <div class="col-xs-6 center">申请扶持导航</div>
+    <div class="col-xs-3">
+        <!--<span class="pull-right">
+            <img class="img-responsive inline-table" style="padding: 0 0 0 0; width: 20px; margin-right: 5px;" src="static/img/搜索_icon.png" /></span>-->
+    </div>
+</div>
+
+<div class="">
+    <div class=" clearfix">
+        <div class="column">
+            <div class="tabbable swiper-container" id="tabs-823289" style="border-bottom: 1px solid #ddd;">
+                <ul class="nav nav-tabs swiper-wrapper">
+                    <li ng-repeat="(key,value) in coulumn3Navigation" class="swiper-slide swiper-title-slide {{$index == 0 ? 'active' : ''}}">
+                        <a href="#{{key}}" data-toggle="tab" style="border: none; color: #000">{{value}}</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="tab-content" style="margin-top: 10px">
+                <div class="tab-pane {{$index == 0 ? 'active' : ''}}" id="{{key}}" ng-repeat="(key,value) in coulumn3List">
+                    <div ng-repeat="x in value" ng-click="showColumnData(2,x.id)">
+                        <div style="padding-left: 15px">
+                            <p style="font-size:17px;">
+                                {{x.docTitle}}
+                            </p>
+                            <p style="color:#ABB0C7">
+                                {{x.docCreateDate}}
+                            </p>
+                        </div>
+                        <div style="background-color: #d9dde1; height: 1px; width: 100%; margin-bottom: 10px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

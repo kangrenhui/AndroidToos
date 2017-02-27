@@ -1,0 +1,22 @@
+﻿<div style="line-height: 45px; color: white; background-color: #527EE8; width: 100%; line-height: 50px; height: 50px;">
+    <div class="col-xs-4" ng-click="columnShow(6)">
+        <img class="img-responsive inline-table" style="padding: 0 0 0 0; width: 20px; margin-right: 5px;" src="static/img/返回_icon.png" /></div>
+    <div class="col-xs-4 center">问卷调查</div>
+    <div class="col-xs-4">
+    </div>
+</div>
+<div ng-repeat="(key,value) in serveral" ng-click="showQuestion(value.id)">
+    <div class="container" style="margin-top: 25px; margin-bottom: 15px;padding-right:0">
+        <table style="width: 100%;">
+            <tr>
+                <td style="width: 70%">
+                    <p style="font-size: 20px; color: #3f3f3f">{{value.serTitel}}</p>
+                    <p style="color: #8d8d8d;font-size: 10px">开始时间：{{value.startDate}}</p>
+                </td>
+                <td style="width: 30%"><div style="background-color:#75c776;color: white;padding: 10px 10px 10px 20px;border-bottom-left-radius: 20px;border-top-left-radius: 20px;font-weight: 700;">{{value.status}}...</div></td>
+            </tr>
+        </table>
+    </div>
+    <div style="background-color: #d9ddE1; height: 10px; width: 100%">
+    </div>
+</div>

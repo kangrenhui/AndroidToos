@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>小微企业名录</title>
+
+    <!-- Bootstrap -->
+    <link href="static/lib/bootstrap.min.css" rel="stylesheet">
+    <link href="static/lib/swiper-3.4.1.min.css" rel="stylesheet">
+    <link href="static/css/common.css" rel="stylesheet">
+    <script src="static/lib/jquery.min.js"></script>
+    <script src="static/lib/angular.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="mainPageCtrl">
+    <!--首页模块-->
+    <div style="text-align: center; background-color: #d3dae8; color: white;" ng-include="'page/indexPage.htm'" ng-show="index1Visible"></div>
+    <div ng-include="'page/regionSelect.htm'" ng-show="regionSelectVisible"></div>
+    <div ng-include="'page/regionSelect2.htm'" ng-show="regionSelect2Visible"></div>
+    <div ng-include="'page/regionSelect3.htm'" ng-show="regionSelect3Visible"></div>
+    <div ng-include="'page/searchForm.htm'" ng-show="searchFormVisible"></div>
+    <div ng-include="'page/searchContentForm.htm'" ng-show="searchContentFormVisible"></div>
+    <div ng-include="'page/questionContentForm.htm'" ng-show="qusetionContentFormVisible"></div>
+    <div ng-include="'page/column1.html'" ng-show="columnVisible[0]"></div>
+    <div ng-include="'page/column2.html'" ng-show="columnVisible[1]"></div>
+    <div ng-include="'page/column3.html'" ng-show="columnVisible[2]"></div>
+    <div ng-include="'page/column4.html'" ng-show="columnVisible[3]"></div>
+    <div ng-include="'page/column5.html'" ng-show="columnVisible[4]"></div>
+    <div ng-include="'page/column6.html'" ng-show="columnVisible[5]"></div>
+    <div ng-include="'page/column7.html'" ng-show="columnVisible[6]"></div>
+    <div ng-include="'page/column1Details.html'" ng-show="columnDetailVisible[0]"></div>
+    <div ng-include="'page/column2Details.html'" ng-show="columnDetailVisible[1]"></div>
+    <div ng-include="'page/column3Details.html'" ng-show="columnDetailVisible[2]"></div>
+    <div ng-include="'page/column4Details.html'" ng-show="columnDetailVisible[3]"></div>
+    <div ng-include="'page/column5Details.html'" ng-show="columnDetailVisible[4]"></div>
+    <div ng-include="'page/column6Details.html'" ng-show="columnDetailVisible[5]"></div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="static/lib/bootstrap.min.js"></script>
+    <script src="static/lib/swiper.js"></script>
+    <script src="static/js/tool.js"></script>
+    <script src="static/js/angularmodel.js"></script>
+</body>
+</html>

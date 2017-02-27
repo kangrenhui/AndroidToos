@@ -1,0 +1,85 @@
+﻿<div style="line-height: 45px; color: white; background-color: #527EE8; width: 100%; line-height: 50px; height: 50px;">
+    <div class="col-xs-4" ng-click="columnShow(0)">
+        <img class="img-responsive inline-table" style="padding: 0 0 0 0; width: 20px; margin-right: 5px;" src="static/img/返回_icon.png" />
+    </div>
+    <div class="col-xs-4 center">要闻动态</div>
+    <div class="col-xs-4">
+        <!--<span class="pull-right">
+            <img class="img-responsive inline-table" style="padding: 0 0 0 0; width: 20px; margin-right: 5px;" src="static/img/搜索_icon.png" /></span>-->
+    </div>
+</div>
+<div class="swiper-container" id="imageSwiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" ng-repeat="(key,value) in coulumn1ListImage" ng-click="showColumnData(0,value.id)" style="height:252px;background-image:url(http://gsxt.saic.gov.cn/wzfileserver/mirco/2/{{value.saveName}});background-repeat: no-repeat;background-position: center;background-size: 100% 100%;max-width:100%;max-height:100%">
+            <div class="container" style="width: 100%;height:100%">
+                <div class="row">
+                    <div style="height: 150px; width: 100%">
+                        <div class="" style="margin-top:231px;">
+                            <div style="height: 10px; width: 100%;margin-bottom: 0px;color:white;">
+                                <p style="width:100%;margin-bottom:0;font-size:15px;opacity: 0.9;background-color:#3e68cf;" class="css2">{{value.docTitle}}</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="swiper-pagination"></div>
+<div class="">
+    <div class=" clearfix">
+        <div class="column">
+            <div class="tabbable swiper-container" id="tabs-823288">
+                <ul class="nav nav-tabs swiper-wrapper">
+                    <li ng-repeat="(key,value) in coulumn1Navigation" class="swiper-slide swiper-title-slide {{$index == 0 ? 'active' : ''}}">
+                        <a href="#{{key}}" ng-click="setColumn1Show(key);" ng-init="$index == 0 ? setColumn1Show(key) :''" data-toggle="tab" style="border: none; color: #000">{{value}}</a>
+                    </li>
+                </ul>
+
+                <div class="" style="margin-top: 10px">
+                    <div class="tab-pane" ng-show="currentkey == key" ng-repeat="(key,value) in coulumn1List">
+                        <div ng-repeat="x in value" ng-click="showColumnData(0,x.id)">
+                            <div style="padding-left: 15px">
+                                <p style="font-size: 17px;">
+                                    {{x.docTitle}}
+                                </p>
+                                <p style="color: #ABB0C7">
+                                    {{x.docPubDate}}
+                                </p>
+                            </div>
+                            <div style="background-color: #d9dde1; height: 1px; width: 100%; margin-bottom: 10px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="tabbable" id="tabs-816332">
+				<ul class="nav nav-tabs">
+					<li ng-repeat="(key,value) in coulumn1Navigation" class="swiper-slide swiper-title-slide {{$index == 0 ? 'active' : ''}}">
+                        <a href="#{{key}}" data-toggle="tab" style="border: none; color: #000">{{value}}</a>
+                    </li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane active" id="1101">
+						<p>
+							I'm in Section 1.
+						</p>
+					</div>
+					<div class="tab-pane" id="1102">
+						<p>
+							Howdy, I'm in Section 2.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>-->
+

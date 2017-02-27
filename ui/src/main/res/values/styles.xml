@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TitleBarView">
+        <attr name="title" format="string"/>
+        <attr name="bg_color" format="string"/>
+        <attr name="t_color" format="string"/>
+        <attr name="backbtn_visable" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="MWebView">
+        <attr name="url" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="MenuBarView">
+        <attr name="name" format="string"/>
+        <attr name="picture" format="string"/>
+    </declare-styleable>
+</resources>

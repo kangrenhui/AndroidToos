@@ -1,0 +1,52 @@
+﻿<div class="tab-content">
+    <!--首页-->
+    <div class="tab-pane active" id="index" ng-include="'page/tabPage/indexTab.html'" style="padding-bottom: 70px;"></div>
+    <!--定制-->
+    <div class="tab-pane" id="customization" ng-include="'page/tabPage/customization.html'"></div>
+    <!--收藏-->
+    <div class="tab-pane" id="collection" ng-include="'page/tabPage/collection.html'"></div>
+    <!--我的-->
+    <div class="tab-pane" id="mine" ng-include="'page/tabPage/mine.html'" style="color: black; background-color: white"></div>
+</div>
+<!--底部导航栏-->
+<nav class="navbar navbar-default  navbar-fixed-bottom" role="navigation" id="navBar">
+    <div class="container-fluid">
+        <div class="tabbable" id="indexTabMainBar">
+            <ul class="nav nav-tabs">
+                <li class="col-xs-3 active" style="float: left">
+                    <a href="#index" data-toggle="tab" style="padding: 0 0;color:#8a8d90" ng-click="resetNavigation(0)">
+                        <img class="img-responsive inline-table" style="padding: 0 0 0 0; width: 40px" src="static/img/1首页.png" ng-show="!navigationBarVisible[0]" />
+                        <img class="img-responsive inline-table" style="padding: 0 0 0 0; width: 40px" src="static/img/1首页-高亮.png" ng-show="navigationBarVisible[0]" />
+                        <br />
+                        首页
+                    </a>
+
+                </li>
+                <li class="col-xs-3" style="float: left">
+                    <a href="#customization" data-toggle="tab" style="padding: 0 0;color:#8a8d90" ng-click="resetNavigation(1)">
+                        <img class="img-responsive inline-table" style="padding: 0 0 0 0; width: 40px" src="static/img/2定制.png" ng-show="!navigationBarVisible[1]" />
+                        <img class="img-responsive inline-table" style="padding: 0 0 0 0; width: 40px" src="static/img/2定制-高亮.png" ng-show="navigationBarVisible[1]" />
+                        <br />
+                        定制</a>
+
+                </li>
+                <li class="col-xs-3" style="float: left">
+                    <a href="#collection" data-toggle="tab" style="padding: 0 0;color:#8a8d90" ng-click="resetNavigation(2)">
+                        <img class="img-responsive inline-table" style="padding: 0 0 0 0; width: 40px" src="static/img/3收藏.png" ng-show="!navigationBarVisible[2]" />
+                        <img class="img-responsive inline-table" style="padding: 0 0 0 0; width: 40px" src="static/img/3收藏-高亮.png" ng-show="navigationBarVisible[2]" />
+                        <br />
+                        收藏</a>
+
+                </li>
+                <li class="col-xs-3" style="float: left">
+                    <a href="#mine" data-toggle="tab" style="padding: 0 0;color:#8a8d90" ng-click="resetNavigation(3)">
+                        <img class="img-responsive inline-table" style="padding: 0 0 0 0; width: 40px" src="static/img/4我的.png" ng-show="!navigationBarVisible[3]" />
+                        <img class="img-responsive inline-table" style="padding: 0 0 0 0; width: 40px" src="static/img/4我的-高亮.png" ng-show="navigationBarVisible[3]" />
+                        <br />
+                        我的</a>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
