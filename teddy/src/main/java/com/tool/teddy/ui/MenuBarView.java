@@ -3,21 +3,15 @@ package com.tool.teddy.ui;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
-import android.net.Uri;
 import android.support.v7.widget.LinearLayoutCompat;
 import android.util.AttributeSet;
-import android.util.EventLog;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.MotionEvent;
-import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
-import java.io.File;
 
 /**
  * Created by teddy on 2017/2/24.
@@ -44,11 +38,13 @@ public class MenuBarView extends LinearLayout{
         setOrientation(VERTICAL);
         setGravity(Gravity.CENTER);
         setPadding(0,30,0,30);
+        setClickable(true);
 
         int imgWidth = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 100, this.getResources().getDisplayMetrics());
         int imgHeight = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 100, this.getResources().getDisplayMetrics());
 
         img = new ImageView(context);
+
         int id = context.getResources().getIdentifier(getImgId(pic), "drawable", context.getPackageName());
         img.setBackgroundResource(id);
         nameTv = new TextView(context);
@@ -71,26 +67,17 @@ public class MenuBarView extends LinearLayout{
     }
 
     @Override
-    public boolean onInterceptTouchEvent(MotionEvent ev) {
-        return super.onInterceptTouchEvent(ev);
-    }
-
-    @Override
     public boolean onTouchEvent(MotionEvent event) {
         if (event.getAction() == MotionEvent.ACTION_DOWN){
             MenuBarView.this.setAlpha((float)0.3);
-            Log.i("down","down");
-            return true;
         }
 
         if (event.getAction() == MotionEvent.ACTION_UP){
             MenuBarView.this.setAlpha(1);
-            Log.i("up","up");
         }
 
         if (event.getAction() == MotionEvent.ACTION_CANCEL){
             MenuBarView.this.setAlpha(1);
-            Log.i("down","down");
         }
 
         return super.onTouchEvent(event);
