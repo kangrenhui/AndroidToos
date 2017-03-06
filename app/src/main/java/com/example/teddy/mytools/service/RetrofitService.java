@@ -1,16 +1,17 @@
 package com.example.teddy.mytools.service;
 
-import com.example.teddy.mytools.service.entity.BookModel;
+import com.google.gson.JsonObject;
 
+import okhttp3.ResponseBody;
 import retrofit2.http.GET;
-import retrofit2.http.Query;
+import retrofit2.http.POST;
 import rx.Observable;
 
 /**
  * Created by teddy on 2017/3/3.
  */
 
-public interface RetrofitTest {
+public interface RetrofitService {
     //需要访问的网址
     /**
      * base url 是 https://api.douban.com/v2/
@@ -62,7 +63,9 @@ public interface RetrofitTest {
      @GET("user")
      Call<User> getUser()
      */
+    @POST("data/GetAppVersion")
+    Observable<JsonObject> getApkVersion();
 
-    @GET("book/search")
-    Observable<BookModel> getSearchBook(@Query("q") String name, @Query("count") String count);
+    @GET("49d590d656fc7d93/baiduwangpan_506.apk")
+    Observable<ResponseBody> downloadApk();
 }
